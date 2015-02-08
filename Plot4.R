@@ -14,7 +14,7 @@ DT<-strptime(paste(mydata$Date, mydata$Time), format="%d/%m/%Y %H:%M:%S")
 
 library(datasets) #add package
 
-# Plotting to plot3.png file
+# Plotting to plot4.png file
 png(filename = "plot4.png",width = 480, height = 480, units = "px", bg = "white")
 
 par(mfrow=c(2,2))

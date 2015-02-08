@@ -10,16 +10,15 @@ mydata = read.table("household_power_consumption.txt",header=FALSE, sep=";",nrow
  skip=66637, colClasses=classes)  # read text file
 names(mydata)<-headnames
 
-# DT<-strptime(paste(mydata$Date, mydata$Time), format="%d/%m/%Y %H:%M:%S")
+DT<-strptime(paste(mydata$Date, mydata$Time), format="%d/%m/%Y %H:%M:%S")
 
 library(datasets) #add package
-with(mydata, plot(DT,Global_active_power,type='l',xlab=" ",
-ylab="Global Active Power (kilowatts)"))
+#with(mydata, plot(DT,Global_active_power,type='l',xlab=" ",
+#ylab="Global Active Power (kilowatts)"))
 
 # Plotting to plot2.png file
 png(filename = "plot2.png",width = 480, height = 480, units = "px", bg = "white")
 with(mydata, plot(DT,Global_active_power,type='l',xlab=" ",
 ylab="Global Active Power (kilowatts)"))
-
 
 dev.off()
